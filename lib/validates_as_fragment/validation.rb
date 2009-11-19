@@ -17,7 +17,7 @@ module ValidatesAsFragment
         include InstanceMethods unless include? InstanceMethods
         options.assert_valid_keys(:indicator, :except)
         write_inheritable_array(:fragment_required_attributes, Array(options[:except]).map(&:to_s))
-        write_inheritable_attribute(:fragment_indicator_attribute, options[:indicator] || :invalid)
+        write_inheritable_attribute(:fragment_indicator_attribute, options[:indicator] || :fragment)
       end
     end
 
